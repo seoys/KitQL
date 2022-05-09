@@ -1,0 +1,23 @@
+query findMainBanners($sort: String, $skip: Int, $limit: Int, $search: String) {
+	findMainBanners(sort: $sort, skip: $skip, limit: $limit, search: $search) {
+		_id
+		__typename
+		contents {
+			txt_title
+			txta_description
+			txt_startDT
+			txt_startTime
+			txt_endDT
+			txt_endTime
+			rad_isUse
+			rad_color
+			txt_sort
+			txt_link
+			images {
+				filename
+			}
+		}
+		totalCount
+		pageSize
+	}
+}
